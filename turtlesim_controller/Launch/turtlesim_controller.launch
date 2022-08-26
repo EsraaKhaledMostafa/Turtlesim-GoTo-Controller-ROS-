@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node" output="screen"/>
+    <node pkg="turtlesim_controller" type="Turtle_Goto_Controller_Task.py" name="Turtle_Controller" output="screen"/>
+    <rosparam command="load" file="$(find turtlesim_controller)/Config/params.yaml"/>
+</launch>
